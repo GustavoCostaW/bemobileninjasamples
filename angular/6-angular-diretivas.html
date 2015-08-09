@@ -1,0 +1,51 @@
+<!-- ANGULAR DIRECTIVES -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Demo</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        angular.module('myApp', [])
+            .controller('FirstController', function ($scope) {
+                $scope.teste = true;
+
+                $scope.change = function () {
+                    $scope.teste = !$scope.teste;
+                }
+
+
+            });
+    </script>
+    <style>
+        .minhaClass {
+            color: red;
+        }
+        
+        .minhaClass2 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="FirstController">
+        <div ng-show="teste">ng-show</div>
+        <div ng-hide="teste">ng-hide</div>
+        <div ng-if="teste">ng-if</div>
+        <div ng-class="{'minhaClass' : teste, 'minhaClass2' : !teste}">Gustavo</div>
+
+        <button ng-click="change()"></button>
+
+        <!--
+<ul>
+    <li ng-repeat="pessoa in pessoas">{{pessoa.nome}} {{pessoa.idade}}</li>
+</ul>
+-->
+    </div>
+</body>
+
+</html>

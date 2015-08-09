@@ -1,0 +1,30 @@
+<!-- ANGULAR HTTP -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Demo</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', [])
+            .controller('FirstController', function ($scope) {
+
+            })
+            .directive('myUsersList', function () {
+
+            })
+            .factory('MyService', function () {
+
+                return {}
+
+            });
+    </script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="FirstController">
+    </div>
+</body>
+
+</html>

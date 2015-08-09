@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+    <!-- LIBRARYS -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="cordova.js"></script>
+    <!-- SCRIPTS -->
+    <script src="app.js"></script>
+    <script src="app_modules/listaModule/listaModule.js"></script>
+    <script src="app_modules/palestranteModule/palestranteModule.js"></script>
+    <script src="app_modules/dataSourceModule/dataSourceModule.js"></script>
+    <title>Eventos</title>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="AppController" class="fixheight">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2><span>
+                <div ng-if="backbutton" ng-click="backButtonEvent()">voltar </div>Eventos
+                </span></h2>
+            </div>
+        </md-toolbar>
+        <ng-view></ng-view>
+    </div>
+</body>
+
+</html>

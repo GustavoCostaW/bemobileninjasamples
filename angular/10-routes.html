@@ -1,0 +1,42 @@
+<!-- ROUTES -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Demo</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script>
+        var app = angular.module('myApp', ['ngRoute'])
+            .config(function ($routeProvider) {
+
+            })
+            .controller('MyAppController', function () {
+
+            })
+            .controller('Tela1Controller', function ($scope) {
+
+            })
+            .controller('Tela2Controller', function ($scope) {
+
+            })
+            .controller('Tela3Controller', function ($scope, $routeParams) {
+
+            });
+    </script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="MyAppController">
+        <ul>
+            <li><a href="#/tela1">Tela 1</a>
+            </li>
+            <li><a href="#/tela2">Tela 2</a>
+            </li>
+        </ul>
+        <ng-view></ng-view>
+    </div>
+</body>
+
+</html>

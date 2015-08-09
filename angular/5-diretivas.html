@@ -1,0 +1,36 @@
+<!-- DIRECTIVES -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Demo</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp', [])
+            .controller('FirstController', function ($scope) {
+
+            })
+            .directive('myDirective', function () {
+                return {
+                    //                    restrict: 'EA',
+                    //                    templateUrl: '',
+                    //                    controller: function ($scope) {},
+                    //                    transclude: true,
+                    //                    scope: {},
+                    //                    link: function ($scope, $el) {}
+                }
+            });
+    </script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="FirstController">
+        <my-directive>
+
+        </my-directive>
+    </div>
+</body>
+
+</html>
