@@ -1,4 +1,4 @@
-<!-- ANGULAR FORMS AND WATCH-->
+<!-- FILTER -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,23 +8,22 @@
     <title>Angular Demo</title>
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
-        angular.module('myApp', [])
+        var app = angular.module('myApp', [])
             .controller('FirstController', function ($scope) {
-                
-            });
+
+            }).filter('myFilter', function () {
+        return function (item) {
+            return item;
+        };
+    });
     </script>
-    <style>
-        .red {
-            color: red;
-        }
-    </style>
 </head>
 
 <body ng-app="myApp">
     <div ng-controller="FirstController">
-        <form name="myForm">
+        <my-directive>
 
-        </form>
+        </my-directive>
     </div>
 </body>
 
